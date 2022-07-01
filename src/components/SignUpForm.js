@@ -16,7 +16,8 @@ function SignUpForm({ onLogin }) {
     setErrors([]);
     setIsLoading(true);
     fetch("https://arcane-atoll-17408.herokuapp.com/signup", {
-      method: "POST",
+    mode: "no-cors",
+    method: "POST",
       headers: {
         "Content-Type": "application/json",
       },

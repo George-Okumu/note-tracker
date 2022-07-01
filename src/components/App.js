@@ -10,7 +10,9 @@ function App() {
 
   useEffect(() => {
     // auto-login
-    fetch("https://arcane-atoll-17408.herokuapp.com/me").then((r) => {
+    fetch("https://arcane-atoll-17408.herokuapp.com/me", {
+      mode: "no-cors"
+    }).then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }

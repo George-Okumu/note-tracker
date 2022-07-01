@@ -7,7 +7,9 @@ function NotesList({ user, setUser }) {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
-    fetch("https://arcane-atoll-17408.herokuapp.com/notes")
+    fetch("https://arcane-atoll-17408.herokuapp.com/notes", {
+      mode: "no-cors"
+    })
       .then((r) => r.json())
       .then(setNotes);
   }, []);
